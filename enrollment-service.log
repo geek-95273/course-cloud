@@ -1,0 +1,333 @@
+nohup: 忽略输入
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.zjsu:course-management[0;1m >---------------------[m
+[[1;34mINFO[m] [1mBuilding course-management 1.0.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mspring-boot-maven-plugin:2.7.18:run[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36mcourse-management[0;1m >>>[m
+[[1;33mWARNING[m] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:resources[m [1m(default-resources)[m @ [36mcourse-management[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m @ [36mcourse-management[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.2.0:testResources[m [1m(default-testResources)[m @ [36mcourse-management[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered properties files.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/u1/桌面/course-cloud/enrollment-service/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mcourse-management[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mspring-boot-maven-plugin:2.7.18:run[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36mcourse-management[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.7.18:run[m [1m(default-cli)[m @ [36mcourse-management[0;1m ---[m
+[[1;34mINFO[m] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2025-11-20 10:22:17.225  INFO 101310 --- [           main] com.zjsu.course.CourseApplication        : Starting CourseApplication using Java 21.0.8 on u1-VB with PID 101310 (/home/u1/桌面/course-cloud/enrollment-service/target/classes started by u1 in /home/u1/桌面/course-cloud/enrollment-service)
+2025-11-20 10:22:17.230 DEBUG 101310 --- [           main] com.zjsu.course.CourseApplication        : Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-20 10:22:17.232  INFO 101310 --- [           main] com.zjsu.course.CourseApplication        : The following 1 profile is active: "dev"
+2025-11-20 10:22:24.736  INFO 101310 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-20 10:22:24.845  INFO 101310 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 3 JPA repository interfaces.
+2025-11-20 10:22:27.733  INFO 101310 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+2025-11-20 10:22:27.758  INFO 101310 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-20 10:22:27.759  INFO 101310 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-20 10:22:27.910  INFO 101310 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-20 10:22:27.910  INFO 101310 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10443 ms
+2025-11-20 10:22:27.989  INFO 101310 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-20 10:22:28.350  INFO 101310 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-20 10:22:28.366  INFO 101310 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:course_db'
+2025-11-20 10:22:28.398  INFO 101310 --- [           main] o.s.boot.web.servlet.RegistrationBean    : Servlet webServlet was not registered (possibly already registered?)
+2025-11-20 10:22:28.561  INFO 101310 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-20 10:22:28.634  INFO 101310 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-20 10:22:28.952  INFO 101310 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-20 10:22:29.091  INFO 101310 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-11-20 10:22:30.248 DEBUG 101310 --- [           main] org.hibernate.SQL                        : create table courses (id varchar(64) not null, capacity integer, code varchar(255) not null, created_at timestamp, enrolled integer, instructor_email varchar(255), instructor_id varchar(255), instructor_name varchar(255), schedule_day_of_week varchar(255), schedule_end_time varchar(255), schedule_expected_attendance integer, schedule_start_time varchar(255), title varchar(255), primary key (id))
+Hibernate: create table courses (id varchar(64) not null, capacity integer, code varchar(255) not null, created_at timestamp, enrolled integer, instructor_email varchar(255), instructor_id varchar(255), instructor_name varchar(255), schedule_day_of_week varchar(255), schedule_end_time varchar(255), schedule_expected_attendance integer, schedule_start_time varchar(255), title varchar(255), primary key (id))
+2025-11-20 10:22:30.262 DEBUG 101310 --- [           main] org.hibernate.SQL                        : create table enrollments (id varchar(64) not null, course_id varchar(255) not null, enrolled_at timestamp, status varchar(255), student_id varchar(255) not null, primary key (id))
+Hibernate: create table enrollments (id varchar(64) not null, course_id varchar(255) not null, enrolled_at timestamp, status varchar(255), student_id varchar(255) not null, primary key (id))
+2025-11-20 10:22:30.268 DEBUG 101310 --- [           main] org.hibernate.SQL                        : create table students (id varchar(64) not null, created_at timestamp, email varchar(255) not null, grade integer, major varchar(255), name varchar(255), student_id varchar(255) not null, updated_at timestamp, primary key (id))
+Hibernate: create table students (id varchar(64) not null, created_at timestamp, email varchar(255) not null, grade integer, major varchar(255), name varchar(255), student_id varchar(255) not null, updated_at timestamp, primary key (id))
+2025-11-20 10:22:30.275 DEBUG 101310 --- [           main] org.hibernate.SQL                        : alter table courses drop constraint if exists UK_61og8rbqdd2y28rx2et5fdnxd
+Hibernate: alter table courses drop constraint if exists UK_61og8rbqdd2y28rx2et5fdnxd
+2025-11-20 10:22:30.277 DEBUG 101310 --- [           main] org.hibernate.SQL                        : alter table courses add constraint UK_61og8rbqdd2y28rx2et5fdnxd unique (code)
+Hibernate: alter table courses add constraint UK_61og8rbqdd2y28rx2et5fdnxd unique (code)
+2025-11-20 10:22:30.281 DEBUG 101310 --- [           main] org.hibernate.SQL                        : alter table enrollments drop constraint if exists UKi0g6mfijtuh199nj653nva6j5
+Hibernate: alter table enrollments drop constraint if exists UKi0g6mfijtuh199nj653nva6j5
+2025-11-20 10:22:30.283 DEBUG 101310 --- [           main] org.hibernate.SQL                        : alter table enrollments add constraint UKi0g6mfijtuh199nj653nva6j5 unique (course_id, student_id)
+Hibernate: alter table enrollments add constraint UKi0g6mfijtuh199nj653nva6j5 unique (course_id, student_id)
+2025-11-20 10:22:30.285 DEBUG 101310 --- [           main] org.hibernate.SQL                        : alter table students drop constraint if exists UK_e2rndfrsx22acpq2ty1caeuyw
+Hibernate: alter table students drop constraint if exists UK_e2rndfrsx22acpq2ty1caeuyw
+2025-11-20 10:22:30.286 DEBUG 101310 --- [           main] org.hibernate.SQL                        : alter table students add constraint UK_e2rndfrsx22acpq2ty1caeuyw unique (email)
+Hibernate: alter table students add constraint UK_e2rndfrsx22acpq2ty1caeuyw unique (email)
+2025-11-20 10:22:30.287 DEBUG 101310 --- [           main] org.hibernate.SQL                        : alter table students drop constraint if exists UK_5mbus2m1tm2acucrp6t627jmx
+Hibernate: alter table students drop constraint if exists UK_5mbus2m1tm2acucrp6t627jmx
+2025-11-20 10:22:30.288 DEBUG 101310 --- [           main] org.hibernate.SQL                        : alter table students add constraint UK_5mbus2m1tm2acucrp6t627jmx unique (student_id)
+Hibernate: alter table students add constraint UK_5mbus2m1tm2acucrp6t627jmx unique (student_id)
+2025-11-20 10:22:30.289  INFO 101310 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-20 10:22:30.304  INFO 101310 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-20 10:22:31.337  WARN 101310 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-20 10:22:31.561 DEBUG 101310 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-11-20 10:22:31.769 DEBUG 101310 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2025-11-20 10:22:31.806 DEBUG 101310 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-11-20 10:22:31.822 DEBUG 101310 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-11-20 10:22:31.954  WARN 101310 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.s2025-11-20 10:24:02.424  INFO 101202 --- [nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-20 10:24:02.425  INFO 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-20 10:24:02.425 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-11-20 10:24:02.425 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-11-20 10:24:02.425 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-11-20 10:24:02.427 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2dcbf825
+2025-11-20 10:24:02.428 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3fd6dfbc
+2025-11-20 10:24:02.431 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-11-20 10:24:02.433  INFO 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2025-11-20 10:24:02.446 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
+2025-11-20 10:24:02.459 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-11-20 10:24:02.466 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-11-20 10:24:02.467 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:24:02.479 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-11-20 10:24:02.484 DEBUG 101202 --- [nio-8086-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-11-20 10:24:02.531 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:24:02.536 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Nov 20 10:24:02 CST 2025, status=404, error=Not Found, path=/actuator/health}]
+2025-11-20 10:24:02.579 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-11-20 10:24:27.516 DEBUG 101202 --- [nio-8086-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:24:27.521 DEBUG 101202 --- [nio-8086-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:24:27.627 DEBUG 101202 --- [nio-8086-exec-3] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:24:27.695 DEBUG 101202 --- [nio-8086-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:24:27.701 DEBUG 101202 --- [nio-8086-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@2f6fdd26]
+2025-11-20 10:24:27.704 DEBUG 101202 --- [nio-8086-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:25:47.747 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:25:47.803 DEBUG 101202 --- [nio-8086-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:25:47.855 DEBUG 101202 --- [nio-8086-exec-5] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:25:47.880 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:25:47.883 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@78bc5ba3]
+2025-11-20 10:25:47.890 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:25:48.148 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-11-20 10:25:48.184 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-11-20 10:25:48.252 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-11-20 10:25:48.255 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:25:48.259 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-11-20 10:25:48.260 DEBUG 101202 --- [nio-8086-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-11-20 10:25:48.271 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:25:48.273 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Nov 20 10:25:48 CST 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-11-20 10:25:48.590 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-11-20 10:26:30.004 DEBUG 101202 --- [io-8086-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/api/students", parameters={}
+2025-11-20 10:26:30.008 DEBUG 101202 --- [io-8086-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.StudentController#createStudent(Student)
+2025-11-20 10:26:30.523 DEBUG 101202 --- [io-8086-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.zjsu.course.model.Student@7407cd33]
+2025-11-20 10:26:30.839 DEBUG 101202 --- [io-8086-exec-10] org.hibernate.SQL                        : select student0_.id as col_0_0_ from students student0_ where student0_.student_id=? limit ?
+Hibernate: select student0_.id as col_0_0_ from students student0_ where student0_.student_id=? limit ?
+2025-11-20 10:26:31.066 DEBUG 101202 --- [io-8086-exec-10] org.hibernate.SQL                        : select student0_.id as id1_2_0_, student0_.created_at as created_2_2_0_, student0_.email as email3_2_0_, student0_.grade as grade4_2_0_, student0_.major as major5_2_0_, student0_.name as name6_2_0_, student0_.student_id as student_7_2_0_, student0_.updated_at as updated_8_2_0_ from students student0_ where student0_.id=?
+Hibernate: select student0_.id as id1_2_0_, student0_.created_at as created_2_2_0_, student0_.email as email3_2_0_, student0_.grade as grade4_2_0_, student0_.major as major5_2_0_, student0_.name as name6_2_0_, student0_.student_id as student_7_2_0_, student0_.updated_at as updated_8_2_0_ from students student0_ where student0_.id=?
+2025-11-20 10:26:31.238 DEBUG 101202 --- [io-8086-exec-10] org.hibernate.SQL                        : insert into students (created_at, email, grade, major, name, student_id, updated_at, id) values (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into students (created_at, email, grade, major, name, student_id, updated_at, id) values (?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-20 10:26:31.263 DEBUG 101202 --- [io-8086-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:26:31.268 DEBUG 101202 --- [io-8086-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@18ef380f]
+2025-11-20 10:26:31.282 DEBUG 101202 --- [io-8086-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-11-20 10:26:37.261 DEBUG 101202 --- [nio-8086-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:26:37.265 DEBUG 101202 --- [nio-8086-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:26:37.295 DEBUG 101202 --- [nio-8086-exec-4] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:26:37.312 DEBUG 101202 --- [nio-8086-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:26:37.313 DEBUG 101202 --- [nio-8086-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@325238e8]
+2025-11-20 10:26:37.324 DEBUG 101202 --- [nio-8086-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:26:37.504 DEBUG 101202 --- [nio-8086-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-11-20 10:26:37.510 DEBUG 101202 --- [nio-8086-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-11-20 10:26:37.530 DEBUG 101202 --- [nio-8086-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-11-20 10:26:37.532 DEBUG 101202 --- [nio-8086-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:26:37.536 DEBUG 101202 --- [nio-8086-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-11-20 10:26:37.538 DEBUG 101202 --- [nio-8086-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-11-20 10:26:37.544 DEBUG 101202 --- [nio-8086-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:26:37.545 DEBUG 101202 --- [nio-8086-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Nov 20 10:26:37 CST 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-11-20 10:26:37.552 DEBUG 101202 --- [nio-8086-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-11-20 10:26:38.736 DEBUG 101202 --- [nio-8086-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:26:38.741 DEBUG 101202 --- [nio-8086-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:26:38.751 DEBUG 101202 --- [nio-8086-exec-8] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:26:38.761 DEBUG 101202 --- [nio-8086-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:26:38.762 DEBUG 101202 --- [nio-8086-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@2bc0c770]
+2025-11-20 10:26:38.768 DEBUG 101202 --- [nio-8086-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:26:38.860 DEBUG 101202 --- [nio-8086-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-11-20 10:26:38.863 DEBUG 101202 --- [nio-8086-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-11-20 10:26:38.874 DEBUG 101202 --- [nio-8086-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-11-20 10:26:38.878 DEBUG 101202 --- [nio-8086-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:26:38.884 DEBUG 101202 --- [nio-8086-exec-9] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-11-20 10:26:38.888 DEBUG 101202 --- [nio-8086-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-11-20 10:26:38.894 DEBUG 101202 --- [nio-8086-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:26:38.895 DEBUG 101202 --- [nio-8086-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Nov 20 10:26:38 CST 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-11-20 10:26:38.902 DEBUG 101202 --- [nio-8086-exec-9] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-11-20 10:26:43.385 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:26:43.390 DEBUG 101202 --- [nio-8086-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:26:43.398 DEBUG 101202 --- [nio-8086-exec-1] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:26:43.409 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:26:43.411 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@2d175dcd]
+2025-11-20 10:26:43.418 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:26:43.506 DEBUG 101202 --- [nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-11-20 10:26:43.514 DEBUG 101202 --- [nio-8086-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-11-20 10:26:43.520 DEBUG 101202 --- [nio-8086-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-11-20 10:26:43.523 DEBUG 101202 --- [nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:26:43.524 DEBUG 101202 --- [nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-11-20 10:26:43.526 DEBUG 101202 --- [nio-8086-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-11-20 10:26:43.530 DEBUG 101202 --- [nio-8086-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:26:43.532 DEBUG 101202 --- [nio-8086-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Nov 20 10:26:43 CST 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-11-20 10:26:43.536 DEBUG 101202 --- [nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-11-20 10:26:44.174 DEBUG 101202 --- [nio-8086-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:26:44.175 DEBUG 101202 --- [nio-8086-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:26:44.187 DEBUG 101202 --- [nio-8086-exec-3] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:26:44.201 DEBUG 101202 --- [nio-8086-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:26:44.201 DEBUG 101202 --- [nio-8086-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@4f51b16f]
+2025-11-20 10:26:44.207 DEBUG 101202 --- [nio-8086-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:26:44.285 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-11-20 10:26:44.296 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-11-20 10:26:44.302 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-11-20 10:26:44.303 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:26:44.305 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-11-20 10:26:44.308 DEBUG 101202 --- [nio-8086-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-11-20 10:26:44.309 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:26:44.310 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Nov 20 10:26:44 CST 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-11-20 10:26:44.313 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-11-20 10:27:04.232 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/enrollments", parameters={}
+2025-11-20 10:27:04.238 DEBUG 101202 --- [nio-8086-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#createEnrollment(Enrollment)
+2025-11-20 10:27:04.306 DEBUG 101202 --- [nio-8086-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.zjsu.course.model.Enrollment@6987d953]
+2025-11-20 10:27:04.338 DEBUG 101202 --- [nio-8086-exec-6] org.hibernate.SQL                        : select student0_.id as col_0_0_ from students student0_ where student0_.student_id=? limit ?
+Hibernate: select student0_.id as col_0_0_ from students student0_ where student0_.student_id=? limit ?
+2025-11-20 10:27:05.543 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8085/api/courses/18f1b333-5b30-4426-a6d5-86a6f10b6d5c
+2025-11-20 10:27:05.774 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-11-20 10:27:06.752 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.client.RestTemplate              : Response 200 OK
+2025-11-20 10:27:06.760 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.client.RestTemplate              : Reading to [java.util.Map<?, ?>]
+2025-11-20 10:27:06.841 DEBUG 101202 --- [nio-8086-exec-6] org.hibernate.SQL                        : select enrollment0_.id as col_0_0_ from enrollments enrollment0_ where enrollment0_.course_id=? and enrollment0_.student_id=? limit ?
+Hibernate: select enrollment0_.id as col_0_0_ from enrollments enrollment0_ where enrollment0_.course_id=? and enrollment0_.student_id=? limit ?
+2025-11-20 10:27:06.889 DEBUG 101202 --- [nio-8086-exec-6] org.hibernate.SQL                        : select enrollment0_.id as id1_1_0_, enrollment0_.course_id as course_i2_1_0_, enrollment0_.enrolled_at as enrolled3_1_0_, enrollment0_.status as status4_1_0_, enrollment0_.student_id as student_5_1_0_ from enrollments enrollment0_ where enrollment0_.id=?
+Hibernate: select enrollment0_.id as id1_1_0_, enrollment0_.course_id as course_i2_1_0_, enrollment0_.enrolled_at as enrolled3_1_0_, enrollment0_.status as status4_1_0_, enrollment0_.student_id as student_5_1_0_ from enrollments enrollment0_ where enrollment0_.id=?
+2025-11-20 10:27:06.902 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8085/api/courses/18f1b333-5b30-4426-a6d5-86a6f10b6d5c
+2025-11-20 10:27:06.907 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.client.RestTemplate              : Writing [{enrolled=1}] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-11-20 10:27:07.149 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.client.RestTemplate              : Response 200 OK
+2025-11-20 10:27:07.168 DEBUG 101202 --- [nio-8086-exec-6] org.hibernate.SQL                        : insert into enrollments (course_id, enrolled_at, status, student_id, id) values (?, ?, ?, ?, ?)
+Hibernate: insert into enrollments (course_id, enrolled_at, status, student_id, id) values (?, ?, ?, ?, ?)
+2025-11-20 10:27:07.178 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:27:07.178 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@7747489d]
+2025-11-20 10:27:07.189 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2025-11-20 10:27:18.934 DEBUG 101202 --- [io-8086-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:27:18.937 DEBUG 101202 --- [io-8086-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:27:18.941 DEBUG 101202 --- [io-8086-exec-10] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:27:18.958 DEBUG 101202 --- [io-8086-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:27:18.959 DEBUG 101202 --- [io-8086-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@6e16fa17]
+2025-11-20 10:27:18.961 DEBUG 101202 --- [io-8086-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:27:39.811 DEBUG 101202 --- [nio-8086-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:27:39.817 DEBUG 101202 --- [nio-8086-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:27:39.843 DEBUG 101202 --- [nio-8086-exec-4] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:27:39.886 DEBUG 101202 --- [nio-8086-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:27:39.886 DEBUG 101202 --- [nio-8086-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@1088bfea]
+2025-11-20 10:27:39.892 DEBUG 101202 --- [nio-8086-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:28:12.291 DEBUG 101202 --- [nio-8086-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:28:12.374 DEBUG 101202 --- [nio-8086-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:28:12.420 DEBUG 101202 --- [nio-8086-exec-9] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:28:12.433 DEBUG 101202 --- [nio-8086-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:28:12.436 DEBUG 101202 --- [nio-8086-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@132ef5c]
+2025-11-20 10:28:12.442 DEBUG 101202 --- [nio-8086-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:28:12.584 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-11-20 10:28:12.602 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-11-20 10:28:12.609 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-11-20 10:28:12.610 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:28:12.611 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-11-20 10:28:12.628 DEBUG 101202 --- [nio-8086-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-11-20 10:28:12.673 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:28:12.674 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Nov 20 10:28:12 CST 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-11-20 10:28:12.676 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-11-20 10:30:36.728 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:30:36.734 DEBUG 101202 --- [nio-8086-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:30:36.741 DEBUG 101202 --- [nio-8086-exec-5] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:30:36.747 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:30:36.750 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@45bd916d]
+2025-11-20 10:30:36.752 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:30:36.986 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-11-20 10:30:36.997 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-11-20 10:30:37.007 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-11-20 10:30:37.008 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:30:37.012 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-11-20 10:30:37.014 DEBUG 101202 --- [nio-8086-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-11-20 10:30:37.015 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:30:37.027 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Nov 20 10:30:37 CST 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-11-20 10:30:37.028 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-11-20 10:35:49.606 DEBUG 101202 --- [nio-8086-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/enrollments", parameters={}
+2025-11-20 10:35:49.607 DEBUG 101202 --- [nio-8086-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#createEnrollment(Enrollment)
+2025-11-20 10:35:49.613 DEBUG 101202 --- [nio-8086-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.zjsu.course.model.Enrollment@420c7ce9]
+2025-11-20 10:35:49.631 DEBUG 101202 --- [nio-8086-exec-4] org.hibernate.SQL                        : select student0_.id as col_0_0_ from students student0_ where student0_.student_id=? limit ?
+Hibernate: select student0_.id as col_0_0_ from students student0_ where student0_.student_id=? limit ?
+2025-11-20 10:35:49.636 DEBUG 101202 --- [nio-8086-exec-4] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8085/api/courses/00000000-0000-0000-0000-000000000000
+2025-11-20 10:35:49.637 DEBUG 101202 --- [nio-8086-exec-4] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-11-20 10:35:49.741 DEBUG 101202 --- [nio-8086-exec-4] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-11-20 10:35:49.861 DEBUG 101202 --- [nio-8086-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.zjsu.course.exception.GlobalExceptionHandler#handleResourceNotFound(ResourceNotFoundException)
+2025-11-20 10:35:49.863 DEBUG 101202 --- [nio-8086-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:35:49.864 DEBUG 101202 --- [nio-8086-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@5072f2df]
+2025-11-20 10:35:49.881 DEBUG 101202 --- [nio-8086-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.zjsu.course.exception.ResourceNotFoundException: Course not found with id: 00000000-0000-0000-0000-000000000000]
+2025-11-20 10:35:49.882 DEBUG 101202 --- [nio-8086-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:36:02.741 DEBUG 101202 --- [nio-8086-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:36:02.742 DEBUG 101202 --- [nio-8086-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:36:02.744 DEBUG 101202 --- [nio-8086-exec-9] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:36:02.749 DEBUG 101202 --- [nio-8086-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:36:02.750 DEBUG 101202 --- [nio-8086-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@5947f4d2]
+2025-11-20 10:36:02.751 DEBUG 101202 --- [nio-8086-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:36:02.875 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-11-20 10:36:02.883 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-11-20 10:36:02.888 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-11-20 10:36:02.892 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:36:02.893 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-11-20 10:36:02.899 DEBUG 101202 --- [nio-8086-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-11-20 10:36:02.906 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:36:02.909 DEBUG 101202 --- [nio-8086-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Nov 20 10:36:02 CST 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-11-20 10:36:02.915 DEBUG 101202 --- [nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-11-20 10:36:12.153 DEBUG 101202 --- [nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:36:12.154 DEBUG 101202 --- [nio-8086-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:36:12.157 DEBUG 101202 --- [nio-8086-exec-2] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:36:12.169 DEBUG 101202 --- [nio-8086-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:36:12.169 DEBUG 101202 --- [nio-8086-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@3e98838e]
+2025-11-20 10:36:12.184 DEBUG 101202 --- [nio-8086-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:36:12.249 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-11-20 10:36:12.252 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-11-20 10:36:12.267 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-11-20 10:36:12.270 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:36:12.277 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-11-20 10:36:12.280 DEBUG 101202 --- [nio-8086-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-11-20 10:36:12.298 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:36:12.301 DEBUG 101202 --- [nio-8086-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Nov 20 10:36:12 CST 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-11-20 10:36:12.332 DEBUG 101202 --- [nio-8086-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2025-11-20 10:36:13.456 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/api/enrollments", parameters={}
+2025-11-20 10:36:13.461 DEBUG 101202 --- [nio-8086-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.zjsu.course.controller.EnrollmentController#getAllEnrollments()
+2025-11-20 10:36:13.464 DEBUG 101202 --- [nio-8086-exec-6] org.hibernate.SQL                        : select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+Hibernate: select enrollment0_.id as id1_1_, enrollment0_.course_id as course_i2_1_, enrollment0_.enrolled_at as enrolled3_1_, enrollment0_.status as status4_1_, enrollment0_.student_id as student_5_1_ from enrollments enrollment0_
+2025-11-20 10:36:13.471 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:36:13.472 DEBUG 101202 --- [nio-8086-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.zjsu.course.common.ApiResponse@a1bf2ba]
+2025-11-20 10:36:13.474 DEBUG 101202 --- [nio-8086-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-11-20 10:36:13.500 DEBUG 101202 --- [io-8086-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2025-11-20 10:36:13.506 DEBUG 101202 --- [io-8086-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-11-20 10:36:13.512 DEBUG 101202 --- [io-8086-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2025-11-20 10:36:13.513 DEBUG 101202 --- [io-8086-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2025-11-20 10:36:13.515 DEBUG 101202 --- [io-8086-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2025-11-20 10:36:13.519 DEBUG 101202 --- [io-8086-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-11-20 10:36:13.525 DEBUG 101202 --- [io-8086-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json, application/json, application/*+json]
+2025-11-20 10:36:13.526 DEBUG 101202 --- [io-8086-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Nov 20 10:36:13 CST 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-11-20 10:36:13.531 DEBUG 101202 --- [io-8086-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404

@@ -1,0 +1,18 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: course-management
+
+logging:
+  level:
+    com.zjsu: DEBUG
+    org.springframework.web: DEBUG
+
+# Profile guidance:
+# - For development use the H2 in-memory profile: `--spring.profiles.active=dev`
+# - For production use MySQL with the `prod` profile: `--spring.profiles.active=prod`
+# (application-prod.yml contains MySQL settings)
+
+
