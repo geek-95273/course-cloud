@@ -10,6 +10,12 @@ logging:
     com.zjsu: DEBUG
     org.springframework.web: DEBUG
 
+services:
+  user-service:
+    url: http://localhost:8080
+  catalog-service:
+    url: http://localhost:8081
+
 # Profile guidance:
 # - For development use the H2 in-memory profile: `--spring.profiles.active=dev`
 # - For production use MySQL with the `prod` profile: `--spring.profiles.active=prod`

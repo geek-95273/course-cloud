@@ -1,6 +1,14 @@
-# Runtime Dockerfile for catalog-service
-FROM eclipse-temurin:25-jre
+# Multi-stage build for catalog-service
+FROM maven:3.9.6-eclipse-temurin-8 AS builder
 WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+RUN mvn -B -DskipTests clean package
+
+FROM eclipse-temurin:8-jre
+WORKDIR /app
+ENV JAVA_OPTS="" \
+    SPRING_PROFILES_ACTIVE=prod
+COPY --from=builder /app/target/*.jar /app/app.jar
 EXPOSE 8081
-COPY target/*.jar /app/app.jar
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+ENTRYPOINT ["sh","-c","java ${JAVA_OPTS} -jar /app/app.jar"]

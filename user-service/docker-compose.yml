@@ -1,0 +1,11 @@
+services:
+  course-mgmt:
+    build: .
+    image: course-management:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    volumes:
+      - ./h2-data:/data

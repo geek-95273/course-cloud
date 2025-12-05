@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    # Use file-based H2 DB so data persists across container restarts.
+    # The database files will be stored under /data inside the container
+    # which we map to a host folder in docker-compose.yml.
+    url: jdbc:h2:file:/data/course_db;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+    hikari:
+      maximum-pool-size: 5
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    com.zjsu: DEBUG
+# Notes:
+# - Use this profile for local development. It uses an in-memory H2 database and
+#   will auto-update the schema (ddl-auto: update) so you can iterate quickly.
+# - To activate: run with `--spring.profiles.active=dev` or set the active profile in your IDE run config.

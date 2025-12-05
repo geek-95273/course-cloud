@@ -1,41 +1,27 @@
 package com.zjsu.course.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.persistence.Embeddable;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import java.time.DayOfWeek;
 
 /**
- * 课程时间安排（嵌入对象）
+ * Embedded schedule slot details.
  */
 @Embeddable
 public class ScheduleSlot {
-    @JsonProperty("dayOfWeek")
-    private String dayOfWeek;
-    
-    @JsonProperty("startTime")
+
+    @Enumerated(EnumType.STRING)
+    private DayOfWeek dayOfWeek;
+
     private String startTime;
-    
-    @JsonProperty("endTime")
     private String endTime;
-    
-    @JsonProperty("expectedAttendance")
-    private Integer expectedAttendance;
 
-    public ScheduleSlot() {}
-
-    public ScheduleSlot(String dayOfWeek, String startTime, String endTime, Integer expectedAttendance) {
-        this.dayOfWeek = dayOfWeek;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.expectedAttendance = expectedAttendance;
-    }
-
-    // Getters and Setters
-    public String getDayOfWeek() {
+    public DayOfWeek getDayOfWeek() {
         return dayOfWeek;
     }
 
-    public void setDayOfWeek(String dayOfWeek) {
+    public void setDayOfWeek(DayOfWeek dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
     }
 
@@ -53,13 +39,5 @@ public class ScheduleSlot {
 
     public void setEndTime(String endTime) {
         this.endTime = endTime;
-    }
-
-    public Integer getExpectedAttendance() {
-        return expectedAttendance;
-    }
-
-    public void setExpectedAttendance(Integer expectedAttendance) {
-        this.expectedAttendance = expectedAttendance;
     }
 }

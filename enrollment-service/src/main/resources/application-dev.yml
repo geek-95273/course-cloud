@@ -28,6 +28,12 @@ logging:
   level:
     org.hibernate.SQL: DEBUG
     com.zjsu: DEBUG
+
+services:
+  user-service:
+    url: http://localhost:8080
+  catalog-service:
+    url: http://localhost:8081
 # Notes:
 # - Use this profile for local development. It uses an in-memory H2 database and
 #   will auto-update the schema (ddl-auto: update) so you can iterate quickly.

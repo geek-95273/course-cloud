@@ -7,8 +7,8 @@ import com.zjsu.course.repository.CourseJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.DayOfWeek;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * 课程业务逻辑层
@@ -39,9 +39,6 @@ public class CourseService {
         if (courseRepository.findByCode(course.getCode()).isPresent()) {
             throw new BusinessException("Course code already exists: " + course.getCode());
         }
-        
-        // 生成唯一ID
-        course.setId(UUID.randomUUID().toString());
         
         return courseRepository.save(course);
     }
@@ -98,11 +95,21 @@ public class CourseService {
             if (sch instanceof java.util.Map) {
                 java.util.Map m = (java.util.Map) sch;
                 com.zjsu.course.model.ScheduleSlot s = new com.zjsu.course.model.ScheduleSlot();
-                s.setDayOfWeek((String) m.get("dayOfWeek"));
+                Object dow = m.get("dayOfWeek");
+                if (dow instanceof String) {
+                    String day = ((String) dow).trim().toUpperCase();
+                    if (!day.isEmpty()) {
+                        try {
+                            s.setDayOfWeek(DayOfWeek.valueOf(day));
+                        } catch (IllegalArgumentException ignored) {
+                            // keep null if not parsable
+                        }
+                    }
+                } else if (dow instanceof DayOfWeek) {
+                    s.setDayOfWeek((DayOfWeek) dow);
+                }
                 s.setStartTime((String) m.get("startTime"));
                 s.setEndTime((String) m.get("endTime"));
-                Object exp = m.get("expectedAttendance");
-                if (exp instanceof Number) s.setExpectedAttendance(((Number) exp).intValue());
                 course.setSchedule(s);
             }
         }
