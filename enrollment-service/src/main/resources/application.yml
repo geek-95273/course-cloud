@@ -3,18 +3,33 @@ server:
 
 spring:
   application:
-    name: course-management
+    name: enrollment-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_SERVER_ADDR:nacos:8848}
+        namespace: ${NACOS_NAMESPACE:dev}
+        group: ${NACOS_GROUP:COURSEHUB_GROUP}
+        ephemeral: true
+        heart-beat-interval: 5000
+        heart-beat-timeout: 15000
 
 logging:
   level:
     com.zjsu: DEBUG
     org.springframework.web: DEBUG
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
 services:
   user-service:
-    url: http://localhost:8080
+    url: ${USER_SERVICE_URL:user-service}
   catalog-service:
-    url: http://localhost:8081
+    url: ${CATALOG_SERVICE_URL:catalog-service}
 
 # Profile guidance:
 # - For development use the H2 in-memory profile: `--spring.profiles.active=dev`

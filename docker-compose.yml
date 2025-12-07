@@ -1,6 +1,28 @@
 version: "3.9"
 
 services:
+  nacos:
+    image: nacos/nacos-server:v3.1.0
+    container_name: nacos
+    environment:
+      - MODE=standalone
+      - NACOS_AUTH_ENABLE=false
+      # Base64-encoded secret with >=32 bytes to satisfy Nacos auth plugin requirements
+      - NACOS_AUTH_TOKEN=MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
+      - NACOS_AUTH_IDENTITY_KEY=serverIdentity
+      - NACOS_AUTH_IDENTITY_VALUE=security
+      - JVM_XMS=256m
+      - JVM_XMX=512m
+      - JVM_XMN=128m
+    ports:
+      # Console UI maps to host 18080 to avoid conflict with user-service 8080
+      - "18080:8080"
+      - "8848:8848"
+      - "9848:9848"
+    restart: unless-stopped
+    networks:
+      - course-cloud-network
+
   catalog-db:
     image: mysql:8.0
     container_name: catalog-db
@@ -20,6 +42,8 @@ services:
       retries: 10
       start_period: 10s
     restart: unless-stopped
+    networks:
+      - course-cloud-network
 
   enrollment-db:
     image: mysql:8.0
@@ -40,6 +64,8 @@ services:
       retries: 10
       start_period: 10s
     restart: unless-stopped
+    networks:
+      - course-cloud-network
 
   user-db:
     image: mysql:8.0
@@ -60,6 +86,8 @@ services:
       retries: 10
       start_period: 10s
     restart: unless-stopped
+    networks:
+      - course-cloud-network
 
   catalog-service:
     build:
@@ -71,12 +99,19 @@ services:
       DB_URL: jdbc:mysql://catalog-db:3306/catalog_db?useSSL=false&serverTimezone=UTC
       DB_USERNAME: root
       DB_PASSWORD: 1234
+      NACOS_SERVER_ADDR: nacos:8848
+      NACOS_NAMESPACE: dev
+      NACOS_GROUP: COURSEHUB_GROUP
     ports:
       - "8081:8081"
     depends_on:
+      nacos:
+        condition: service_started
       catalog-db:
         condition: service_healthy
     restart: unless-stopped
+    networks:
+      - course-cloud-network
 
   user-service:
     build:
@@ -88,12 +123,19 @@ services:
       DB_URL: jdbc:mysql://user-db:3306/user_db?useSSL=false&serverTimezone=UTC
       DB_USERNAME: root
       DB_PASSWORD: 1234
+      NACOS_SERVER_ADDR: nacos:8848
+      NACOS_NAMESPACE: dev
+      NACOS_GROUP: COURSEHUB_GROUP
     ports:
       - "8080:8080"
     depends_on:
+      nacos:
+        condition: service_started
       user-db:
         condition: service_healthy
     restart: unless-stopped
+    networks:
+      - course-cloud-network
 
   enrollment-service:
     build:
@@ -105,11 +147,16 @@ services:
       DB_URL: jdbc:mysql://enrollment-db:3306/enrollment_db?useSSL=false&serverTimezone=UTC
       DB_USERNAME: root
       DB_PASSWORD: 1234
-      USER_SERVICE_URL: http://user-service:8080
-      CATALOG_SERVICE_URL: http://catalog-service:8081
+      USER_SERVICE_URL: user-service
+      CATALOG_SERVICE_URL: catalog-service
+      NACOS_SERVER_ADDR: nacos:8848
+      NACOS_NAMESPACE: dev
+      NACOS_GROUP: COURSEHUB_GROUP
     ports:
       - "8082:8082"
     depends_on:
+      nacos:
+        condition: service_started
       enrollment-db:
         condition: service_healthy
       user-service:
@@ -117,8 +164,13 @@ services:
       catalog-service:
         condition: service_started
     restart: unless-stopped
+    networks:
+      - course-cloud-network
 
 volumes:
   catalog-db-data:
   enrollment-db-data:
   user-db-data:
+
+networks:
+  course-cloud-network:

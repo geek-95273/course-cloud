@@ -4,8 +4,9 @@ import com.zjsu.course.exception.BusinessException;
 import com.zjsu.course.exception.ResourceNotFoundException;
 import com.zjsu.course.model.EnrollmentRecord;
 import com.zjsu.course.repository.EnrollmentJpaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.HttpClientErrorException;
@@ -16,22 +17,28 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 选课业务逻辑层（通过 HTTP 调用 catalog-service 验证课程）
+ * 选课业务逻辑层（通过 HTTP 调用 catalog-service、user-service）
  */
 @Service
 public class EnrollmentService {
 
-    @Autowired
-    private EnrollmentJpaRepository enrollmentRepository;
+    private final EnrollmentJpaRepository enrollmentRepository;
+    private final RestTemplate restTemplate;
+    private final DiscoveryClient discoveryClient;
 
-    @Autowired
-    private RestTemplate restTemplate;
+    @Value("${services.user-service.url:user-service}")
+    private String userServiceBase;
 
-    @Value("${services.user-service.url:http://localhost:8080}")
-    private String userServiceUrl;
+    @Value("${services.catalog-service.url:catalog-service}")
+    private String catalogServiceBase;
 
-    @Value("${services.catalog-service.url:http://localhost:8081}")
-    private String catalogServiceUrl;
+    public EnrollmentService(EnrollmentJpaRepository enrollmentRepository,
+                             RestTemplate restTemplate,
+                             DiscoveryClient discoveryClient) {
+        this.enrollmentRepository = enrollmentRepository;
+        this.restTemplate = restTemplate;
+        this.discoveryClient = discoveryClient;
+    }
 
     public List<EnrollmentRecord> getAllEnrollments() {
         return enrollmentRepository.findAll();
@@ -44,7 +51,6 @@ public class EnrollmentService {
 
     @Transactional
     public EnrollmentRecord createEnrollment(EnrollmentRecord enrollment) {
-        // 验证必填
         if (enrollment.getCourseId() == null || enrollment.getCourseId().trim().isEmpty()) {
             throw new BusinessException("课程ID不能为空");
         }
@@ -55,8 +61,9 @@ public class EnrollmentService {
         String courseId = enrollment.getCourseId().trim();
         String studentId = enrollment.getStudentId().trim();
 
-        // 验证学生是否存在（调用 user-service）
-        String userUrl = userServiceUrl + "/api/students/" + studentId;
+        // 校验学生是否存在（服务发现 + 负载均衡调用 user-service）
+        ensureServiceAvailable(resolveServiceName(userServiceBase), "user-service");
+        String userUrl = buildServiceUrl(userServiceBase, "/api/students/" + studentId);
         try {
             restTemplate.getForObject(userUrl, Map.class);
         } catch (HttpClientErrorException.NotFound e) {
@@ -65,8 +72,9 @@ public class EnrollmentService {
             throw new BusinessException("Failed to call user service: " + e.getMessage());
         }
 
-        // 调用 catalog-service 验证课程并获取容量信息
-        String url = catalogServiceUrl + "/api/courses/" + courseId;
+        // 调用 catalog-service 校验课程并获取容量
+        ensureServiceAvailable(resolveServiceName(catalogServiceBase), "catalog-service");
+        String url = buildServiceUrl(catalogServiceBase, "/api/courses/" + courseId);
         Map<String, Object> response;
         try {
             response = restTemplate.getForObject(url, Map.class);
@@ -82,23 +90,19 @@ public class EnrollmentService {
         int capacity = capacityNum == null ? 0 : capacityNum.intValue();
         int enrolledCount = enrolledNum == null ? 0 : enrolledNum.intValue();
 
-        // 检查容量
         if (enrolledCount >= capacity) {
             throw new BusinessException("Course is full");
         }
 
-        // 检查重复选课
         if (enrollmentRepository.existsByCourseIdAndStudentId(courseId, studentId)) {
             throw new BusinessException("Already enrolled in this course");
         }
 
-        // 创建选课记录
         enrollment.setCourseId(courseId);
         enrollment.setStudentId(studentId);
 
         EnrollmentRecord saved = enrollmentRepository.save(enrollment);
 
-        // 异步/容错地更新课程已选人数（调用 catalog-service）
         updateCourseEnrolledCount(courseId, enrolledCount + 1);
 
         return saved;
@@ -108,10 +112,8 @@ public class EnrollmentService {
     public void deleteEnrollment(String id) {
         EnrollmentRecord enrollment = getEnrollmentById(id);
 
-        // 删除选课记录
         enrollmentRepository.deleteById(id);
 
-        // 尝试更新课程已选人数（可容错）
         String courseId = enrollment.getCourseId();
         long remaining = enrollmentRepository.countByCourseId(courseId);
         updateCourseEnrolledCount(courseId, (int) remaining);
@@ -134,13 +136,12 @@ public class EnrollmentService {
     }
 
     private void updateCourseEnrolledCount(String courseId, int newCount) {
-        String url = catalogServiceUrl + "/api/courses/" + courseId;
+        String url = buildServiceUrl(catalogServiceBase, "/api/courses/" + courseId);
         Map<String, Object> updateData = new HashMap<>();
         updateData.put("enrolled", newCount);
         try {
             restTemplate.put(url, updateData);
         } catch (Exception e) {
-            // 记录但不回滚主流程
             System.err.println("Failed to update course enrolled count: " + e.getMessage());
         }
     }
@@ -158,5 +159,41 @@ public class EnrollmentService {
             return response;
         }
         throw new BusinessException("Invalid response from " + sourceName);
+    }
+
+    private String buildServiceUrl(String base, String path) {
+        String normalized = base;
+        if (!normalized.startsWith("http://") && !normalized.startsWith("https://")) {
+            normalized = "http://" + normalized;
+        }
+        if (path != null && !path.startsWith("/")) {
+            normalized = normalized + "/";
+        }
+        return path == null ? normalized : normalized + path;
+    }
+
+    private String resolveServiceName(String base) {
+        if (base == null || base.isEmpty()) {
+            return null;
+        }
+        if (!base.startsWith("http://") && !base.startsWith("https://")) {
+            return base;
+        }
+        try {
+            java.net.URI uri = java.net.URI.create(base);
+            return uri.getHost();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    private void ensureServiceAvailable(String serviceName, String fallbackLabel) {
+        if (serviceName == null || discoveryClient == null) {
+            return;
+        }
+        List<ServiceInstance> instances = discoveryClient.getInstances(serviceName);
+        if (instances == null || instances.isEmpty()) {
+            throw new BusinessException("Service not available: " + (fallbackLabel != null ? fallbackLabel : serviceName));
+        }
     }
 }
